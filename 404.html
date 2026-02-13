@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MASTER KIT AI — 4 ИИ для системного онлайн-дохода</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="MASTER KIT AI — 4 AI-системы для системного онлайн-дохода и рекуррентной модели заработка.">
+  <meta property="og:title" content="MASTER KIT AI — AI-система дохода">
+  <meta property="og:description" content="Как выйти на $300–700 за 7–14 дней через AI-связки и системный доход.">
+  <meta property="og:image" content="preview.jpg">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: #12172a;
+      --accent: #00ffd5;
+      --accent2: #7c7cff;
+      --text: #e6e9ff;
+      --muted: #9aa0d1;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(124,124,255,0.15), transparent),
+                  radial-gradient(800px 500px at 90% 10%, rgba(0,255,213,0.12), transparent),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(600px 400px at 10% 10%, rgba(124,124,255,.15), transparent 70%),
+    radial-gradient(500px 350px at 90% 20%, rgba(0,255,213,.12), transparent 70%),
+    radial-gradient(400px 300px at 50% 90%, rgba(124,124,255,.10), transparent 70%);
+  animation: flow 18s linear infinite alternate;
+  z-index:-1;
+}
+
+
+    
+@keyframes flow {
+  0%   { filter:hue-rotate(0deg); transform:scale(1); }
+  50%  { filter:hue-rotate(12deg); transform:scale(1.05); }
+  100% { filter:hue-rotate(-8deg); transform:scale(1); }
+}
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    header {
+      padding: 120px 0 100px;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #000;
+      font-weight: 700;
+      letter-spacing: .3px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 68px);
+      line-height: 1.05;
+      font-weight: 900;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-sub {
+      max-width: 760px;
+      margin: 0 auto 40px;
+      font-size: 20px;
+      color: var(--muted);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 36px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #000;
+      font-weight: 800;
+      font-size: 18px;
+      text-decoration: none;
+      transition: .25s ease;
+      box-shadow: 0 20px 40px rgba(0,255,213,.25);
+    }
+
+    .cta:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 30px 60px rgba(124,124,255,.35); }
+    
+    .cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::after {
+  content:'';
+  position:absolute;
+  inset:-2px;
+  background:
+    linear-gradient(120deg, transparent 30%, rgba(255,255,255,.5), transparent 70%);
+  transform: translateX(-100%);
+  transition: .6s ease;
+}
+
+.cta:hover::after {
+  transform: translateX(100%);
+}
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 80px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+      padding: 28px;
+      backdrop-filter: blur(6px);
+      transition: .25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(600px 200px at 10% 0%, rgba(124,124,255,.15), transparent);
+      opacity: .0;
+      transition: .3s ease;
+    }
+
+    .card:hover::before { opacity: 1; }
+    .card:hover { transform: translateY(-6px); border-color: rgba(124,124,255,.5); 
+      box-shadow:
+    0 0 0 1px rgba(124,124,255,.4),
+    0 20px 80px rgba(124,124,255,.35),
+    inset 0 0 40px rgba(124,124,255,.12);}
+
+    .card h3 { font-size: 22px; margin-bottom: 10px; }
+    .card p { color: var(--muted); }
+
+    section { padding: 100px 0; }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 60px;
+      align-items: center;
+    }
+
+    .big {
+      font-size: 46px;
+      line-height: 1.1;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    ul {
+      margin-top: 20px;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    li::before {
+      content: '';
+      margin-right: 10px;
+      color: var(--accent);
+    }
+
+    footer {
+      padding: 80px 0 100px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(124,124,255,.35), transparent 70%);
+      top: -200px;
+      left: -200px;
+      filter: blur(60px);
+      z-index: -1;
+    }
+      .icon {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0,255,213,.18), rgba(124,124,255,.18));
+  box-shadow:
+    0 10px 30px rgba(124,124,255,.25),
+    inset 0 0 0 1px rgba(255,255,255,.12);
+}
+
+.iconify {
+  font-size: 36px;
+  color: var(--accent);
+  filter: drop-shadow(0 0 10px rgba(0,255,213,.45));
+}
+
+
+    /* MODAL */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(5,8,20,.65); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; pointer-events: none; transition: .4s ease; }
+    .modal-overlay.active { opacity: 1; pointer-events: all; }
+
+    .modal { max-width: 720px; width: 92%; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0)); border-radius: 28px; padding: 48px 36px; text-align: center; box-shadow: 0 40px 120px rgba(124,124,255,.35); animation: pop .5s ease; }
+
+    @keyframes pop { from { transform: scale(.9); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+
+    .modal h2 { font-size: clamp(28px,4vw,46px); line-height: 1.1; margin-bottom: 16px; }
+    .modal p { font-size: 18px; color: var(--muted); margin-bottom: 28px; }
+
+    .pulse { animation: pulse 1.8s infinite; }
+    @keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);} }
+
+    .counter { margin-top: 18px; font-size: 15px; color: var(--muted); }
+    .counter span { color: var(--accent); font-weight: 700; }
+
+    .case-pro {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-wrap {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 22px;
+  padding: 20px 22px;
+  min-width: 170px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(124,124,255,.2);
+  transition: .35s ease;
+}
+
+.step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.step small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.step:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 999px;
+}
+
+.profit span {
+  background: linear-gradient(135deg, gold, orange);
+}
+
+.glow-card {
+  border-color: rgba(0,255,213,.6);
+  box-shadow: 0 0 40px rgba(0,255,213,.25);
+}
+    
+
+.level-up {
+  padding: 110px 0;
+}
+
+.level-up .sub {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  color: var(--muted);
+}
+
+.levels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.level-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 26px 28px;
+  border-radius: 18px;
+  max-width: 260px;
+  transition: .4s ease;
+}
+
+.level-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 40px rgba(88,101,242,.15);
+    box-shadow:
+    0 0 0 1px rgba(124,124,255,.4),
+    0 20px 80px rgba(124,124,255,.35),
+    inset 0 0 40px rgba(124,124,255,.12);
+}
+
+.level-card.active {
+  background: linear-gradient(135deg, rgba(88,101,242,.12), rgba(0,255,200,.08));
+  border-color: rgba(88,101,242,.4);
+  box-shadow: 0 0 60px rgba(88,101,242,.25);
+}
+
+.level-tag {
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.arrow {
+  font-size: 26px;
+  opacity: .4;
+}
+    
+.hero-icon {
+  font-size: 22px;
+  color: var(--accent);
+  filter: drop-shadow(0 0 8px rgba(0,255,213,.6));
+}
+    
+.step-icon {
+  font-size: 24px;
+  color: #00ffd5;
+  filter: drop-shadow(0 0 12px rgba(0,255,213,.7));
+}
+    
+.warn-icon {
+  font-size: 22px;
+  color: #00ffd5;
+  filter: drop-shadow(0 0 8px rgba(0,255,213,.6));
+  vertical-align: middle;
+}
+    
+.quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.quiz-btn {
+  background: linear-gradient(135deg, #0c1220, #121a30);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 22px 14px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: .3s ease;
+  box-shadow: 0 0 0 rgba(80,120,255,0);
+}
+
+.quiz-btn i {
+  width: 36px;
+  height: 36px;
+  stroke-width: 1.8;
+  color: #7da2ff;
+}
+
+.quiz-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(125,162,255,.5);
+  box-shadow: 0 0 35px rgba(125,162,255,.35);
+  background: linear-gradient(135deg,#111a33,#18244a);
+}
+    
+.quiz-btn .iconify {
+  font-size: 40px;
+  color: #7da2ff;
+  transition: .3s;
+}
+
+.quiz-btn:hover .iconify {
+  transform: scale(1.15);
+  color: #9bb3ff;
+}
+    
+/* ===== SOLD OUT PRO ===== */
+
+#soldout .modal {
+  max-width: 560px;
+  padding: 52px 46px;
+  border-radius: 28px;
+  text-align: center;
+  background:
+    radial-gradient(600px 260px at 20% 0%, rgba(124,124,255,.18), transparent),
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow:
+    0 40px 140px rgba(124,124,255,.35),
+    inset 0 0 0 1px rgba(255,255,255,.05);
+  animation: soldPop .45s ease;
+}
+
+/* ICON */
+.soldout-icon {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 20px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255,80,80,.25), rgba(255,0,0,.15));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 40px rgba(255,80,80,.45),
+    inset 0 0 0 1px rgba(255,255,255,.12);
+}
+
+.soldout-icon .iconify {
+  font-size: 42px;
+  color: #ff4d4d;
+  filter: drop-shadow(0 0 12px rgba(255,60,60,.8));
+}
+
+/* TITLE */
+.soldout-title {
+  font-size: 48px;
+  line-height: 1.05;
+  font-weight: 900;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #ff5c5c, #ff8c5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SUB */
+.soldout-sub {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+
+/* BOX */
+.soldout-box {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 26px;
+  display: grid;
+  gap: 10px;
+}
+
+.soldout-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.soldout-line .iconify {
+  font-size: 20px;
+  color: var(--accent);
+}
+
+/* CTA */
+.soldout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 34px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000;
+  font-weight: 800;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 18px 40px rgba(0,255,213,.35);
+  transition: .25s ease;
+}
+
+.soldout-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 26px 60px rgba(124,124,255,.45);
+}
+
+/* NOTE */
+.soldout-note {
+  margin-top: 14px;
+  font-size: 13px;
+  opacity: .65;
+}
+
+/* ===== AUDIENCE PRO ===== */
+
+.audience-pro {
+  padding: 110px 0;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+  margin-top: 60px;
+  align-items: stretch;
+}
+
+
+.audience-card {
+  position: relative;
+  padding: 32px 26px 28px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
+  border: 1px solid rgba(255,255,255,.12);
+  text-align: center;
+  transition: .35s ease;
+  overflow: hidden;
+  will-change: transform;
+backface-visibility: hidden;
+transform: translateZ(0);
+}
+
+.audience-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px 200px at 20% 0%, rgba(124,124,255,.18), transparent);
+  opacity: 0;
+  transition: .35s ease;
+}
+
+.audience-card:hover::before {
+  opacity: 1;
+}
+
+.audience-card:hover {
+  transform: translate3d(0,-8px,0) scale(1.02);
+  border-color: rgba(124,124,255,.7);
+  box-shadow:
+    0 0 0 1px rgba(124,124,255,.4),
+    0 20px 80px rgba(124,124,255,.35),
+    inset 0 0 40px rgba(124,124,255,.12);
+}
+
+.audience-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0,255,213,.18), rgba(124,124,255,.18));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 40px rgba(0,255,213,.35),
+    inset 0 0 0 1px rgba(255,255,255,.12);
+}
+
+.audience-icon .iconify {
+  font-size: 34px;
+  color: var(--accent);
+  filter: drop-shadow(0 0 10px rgba(0,255,213,.6));
+}
+
+.audience-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.audience-card p {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.audience-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  background: linear-gradient(135deg, rgba(0,255,213,.25), rgba(124,124,255,.25));
+  color: var(--accent);
+}
+
+.audience-tag.pro {
+  background: linear-gradient(135deg, gold, orange);
+  color: #000;
+}
+    
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: .8s cubic-bezier(.16,.84,.44,1);
+}
+
+[data-animate].show {
+  opacity:1;
+  transform:none;
+}
+
+.card, .audience-card, .level-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+  backdrop-filter: blur(12px) saturate(140%);
+}
+    
+.footer-pro {
+  padding: 80px 20px 40px;
+  margin-top: 120px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(10,10,20,0.4),
+    rgba(5,5,15,0.9)
+  );
+
+  border-top: 1px solid rgba(124,124,255,.2);
+}
+
+.footer-top {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.footer-tag {
+  font-size: 13px;
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-why {
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: .75;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(124,124,255,.15);
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  opacity: .5;
+}
+    
+@media(max-width:768px){
+
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-why {
+    max-width: 100%;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .audience-pro {
+    padding: 70px 0;
+  }
+
+  .audience-grid {
+    gap: 18px;
+    margin-top: 36px;
+  }
+
+  .audience-card {
+    padding: 24px 18px 22px;
+    border-radius: 18px;
+  }
+
+  .audience-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .audience-icon .iconify {
+    font-size: 26px;
+  }
+
+  .audience-card h3 {
+    font-size: 18px;
+  }
+
+  .audience-card p {
+    font-size: 14px;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+
+  #soldout .modal {
+    padding: 34px 22px;
+    border-radius: 22px;
+  }
+
+  .soldout-icon {
+    width: 62px;
+    height: 62px;
+    margin-bottom: 14px;
+    border-radius: 18px;
+  }
+
+  .soldout-icon .iconify {
+    font-size: 30px;
+  }
+
+  .soldout-title {
+    font-size: 28px;
+  }
+
+  .soldout-sub {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .soldout-box {
+    padding: 14px 14px;
+    margin-bottom: 18px;
+  }
+
+  .soldout-line {
+    font-size: 13px;
+  }
+
+  .soldout-btn {
+    padding: 14px 20px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .soldout-note {
+    font-size: 11px;
+  }
+}
+
+@keyframes soldPop {
+  from { transform: scale(.9); opacity: 0 }
+  to   { transform: scale(1); opacity: 1 }
+}
+
+@media (max-width: 768px) {
+
+  .quiz-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .quiz-btn {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 18px 20px;
+    font-size: 17px;
+    border-radius: 16px;
+  }
+
+  .quiz-btn .iconify {
+    font-size: 28px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .progress-wrap {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .line {
+    width: 3px;
+    height: 32px;
+    background: linear-gradient(180deg, var(--accent), var(--accent2));
+  }
+
+  .step {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px;
+  }
+
+  .big {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width:768px) {
+  .levels {
+    flex-direction: column;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="glow"></div>
+    <div class="container">
+      <span class="badge">FREE MASTER KIT</span>
+      <h1>
+Как новичку за 7–14 дней выйти на <span class="gradient">первые $300–700</span> и построить свою AI-связку<br>
+</h1>
+
+<p class="hero-sub">
+Если ты <b>новичок</b> и устал от схем, курсов и разовых заработков — этот MASTER KIT покажет,
+как построить <b>понятную AI-систему дохода</b> даже без опыта, команды и рекламы.
+</p>
+
+<p class="hero-sub">
+  <span class="iconify hero-icon" data-icon="ph:timer-bold"></span>
+  Через <span class="gradient">30 минут</span> ты уже сможешь запустить свою первую AI-связку.
+</p>
+
+
+      <a href="javascript:void(0)" onclick="openQuiz()" class="cta">
+  Пройти быстрый квиз →
+</a>
+
+      <div class="grid">
+
+  <div class="card" data-animate>
+    <div class="icon">
+      <span class="iconify" data-icon="ph:gear-six-bold"></span>
+    </div>
+    <h3>AI-автоматизация дохода</h3>
+    <p>Система превращают хаотичный заработок в стабильный и прогнозируемый.</p>
+  </div>
+
+  <div class="card" data-animate>
+    <div class="icon">
+      <span class="iconify" data-icon="ph:lightning-bold"></span>
+    </div>
+    <h3>Контент-машины</h3>
+    <p>Платформы, создающие прогревающий контент и автоворонки в 1 клик.</p>
+  </div>
+
+  <div class="card" data-animate>
+    <div class="icon">
+      <span class="iconify" data-icon="ph:chart-line-up-bold"></span>
+    </div>
+    <h3>Денежная аналитика</h3>
+    <p>AI-системы, считают прибыль, прогнозируют рост и подсказывают лучшие связки.</p>
+  </div>
+
+  <div class="card" data-animate>
+    <div class="icon">
+      <span class="iconify" data-icon="ph:rocket-launch-bold"></span>
+    </div>
+    <h3>Масштабируемые связки</h3>
+    <p>Модели, позволяющие строить подписочный и рекуррентный доход.</p>
+  </div>
+
+</div>
+  </header>
+
+<section class="audience-pro">
+  <div class="container">
+
+    <h2 class="big" style="text-align:center">
+      Кому идеально подойдёт <span class="gradient">MASTER KIT</span>
+    </h2>
+
+    <p class="hero-sub" style="text-align:center;max-width:720px">
+      Этот набор создан для тех, кто хочет <b>перейти на новый уровень дохода</b> 
+      и перестать зависеть от случайных заработков
+    </p>
+
+    <div class="audience-grid">
+
+      <div class="audience-card" data-animate>
+        <div class="audience-icon">
+          <span class="iconify" data-icon="ph:rocket-launch-bold"></span>
+        </div>
+        <h3>Новичкам</h3>
+        <p>Хочешь войти в онлайн-заработок быстро, безопасно и без хаоса.</p>
+        <span class="audience-tag">START MODE</span>
+      </div>
+
+      <div class="audience-card" data-animate>
+        <div class="audience-icon">
+          <span class="iconify" data-icon="ph:student-bold"></span>
+        </div>
+        <h3>Тем, кто устал от курсов</h3>
+        <p>Хочешь не учиться бесконечно, а получать реальные результаты.</p>
+        <span class="audience-tag">RESULT MODE</span>
+      </div>
+
+      <div class="audience-card" data-animate> 
+        <div class="audience-icon">
+          <span class="iconify" data-icon="ph:briefcase-bold"></span>
+        </div>
+        <h3>Фрилансерам</h3>
+        <p>Хочешь выйти из зависимости от заказчиков и создать систему.</p>
+        <span class="audience-tag">SYSTEM MODE</span>
+      </div>
+
+      <div class="audience-card" data-animate>
+        <div class="audience-icon">
+          <span class="iconify" data-icon="ph:crown-bold"></span>
+        </div>
+        <h3>Предпринимателям</h3>
+        <p>Хочешь масштабировать доход через AI и автоматизацию.</p>
+        <span class="audience-tag">PRO MODE</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <section>
+    <div class="container split">
+      <div>
+        <h2 class="big">Почему 99% людей<br>застревают в разовом доходе</h2>
+        <p>
+          Потому что пытаются зарабатывать линейно: больше времени — больше денег. Но настоящий рост даёт <b>переход к системному и рекуррентному доходу</b>, где AI работает вместо тебя.
+          Настоящее преимущество дают **нишевые AI-платформы**, о которых не пишут в блогах
+          и не рассказывают на YouTube.
+        </p>
+        <ul>
+          <li><span class="iconify hero-icon" data-icon="ph:lightning-bold"></span> 
+Они автоматизируют сложные процессы</li>
+          <li><span class="iconify hero-icon" data-icon="ph:lightning-bold"></span> 
+Дают кратное ускорение</li>
+          <li><span class="iconify hero-icon" data-icon="ph:lightning-bold"></span> 
+Создают барьер входа для конкурентов</li>
+          <li><span class="iconify hero-icon" data-icon="ph:lightning-bold"></span> 
+Позволяют строить рекуррентный доход</li>
+        </ul>
+      </div>
+      <div class="card" data-animate>
+        <h3>Что внутри PDF</h3>
+        <p>
+          Мы собрали 4 AI-системы, которые используют:
+          маркетинговые агентства, SaaS-стартапы и digital-предприниматели
+          для масштабирования прибыли.
+        </p>
+        <ul>
+          <li><span class="iconify step-icon" data-icon="ph:number-circle-one-bold"></span>
+ Обзор платформ</li>
+          <li><span class="iconify step-icon" data-icon="ph:number-circle-two-bold"></span>
+ Реальные кейсы применения</li>
+          <li><span class="iconify step-icon" data-icon="ph:number-circle-three-bold"></span>
+ Стратегии монетизации</li>
+          <li><span class="iconify step-icon" data-icon="ph:number-circle-four-bold"></span> Связки под разные ниши</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<section class="case-pro">
+  <div class="container">
+
+    <h2 class="big" style="text-align:center">
+      Как новичок прошёл путь от 0 → $430 за 14 дней
+    </h2>
+
+    <p class="hero-sub" style="text-align:center">
+      Реальный сценарий без опыта, команды и рекламы
+    </p>
+
+    <!-- Progress Path -->
+    <div class="progress-wrap">
+
+      <div class="step done" data-animate>
+        <span>1</span>
+        <p>Разобрал систему</p>
+        <small>День 1</small>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step done" data-animate>
+        <span>2</span>
+        <p>Собрал AI-связку</p>
+        <small>День 2</small>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step done" data-animate>
+        <span>3</span>
+        <p>Получил заявки</p>
+        <small>День 5</small>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step profit pulse" data-animate>
+        <span>$</span>
+        <p>$430 чистой прибыли</p>
+        <small>День 14</small>
+      </div>
+
+    </div>
+
+    <!-- Before / After -->
+    <div class="grid" style="margin-top:70px">
+
+      <div class="card" data-animate>
+        <h3>Было</h3>
+        <ul>
+          <li>0 опыта</li>
+          <li>страх начать</li>
+          <li>разрозненные знания</li>
+          <li>нет стратегии</li>
+        </ul>
+      </div>
+
+      <div class="card" data-animate>
+        <h3>Стало</h3>
+        <ul>
+          <li>чёткая AI-система</li>
+          <li>автоматизация</li>
+          <li>стабильные заявки</li>
+          <li>прогнозируемый доход</li>
+        </ul>
+      </div>
+
+      <div class="card glow-card" data-animate>
+        <h3>Как это работает</h3>
+        <ul>
+          <li>Топ 4 готовые AI</li>
+          <li>Весь контент-автомат</li>
+          <li>Воронка для прогрева</li>
+          <li>И платформа монетизации</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="level-up">
+  <div class="container">
+    <h2 class="big center">Ты переходишь в новый уровень дохода! TRAND 2026</h2>
+    <p class="sub center">
+      Это не просто инструменты. Это <b>смена логики заработка</b>.<br><br> На самом деле это тренд 2026 о котором все говорят, но делают и применяют на деле <b>только единицы</b>.
+    </p>
+
+    <div class="levels">
+
+      <div class="level-card" data-animate>
+        <span class="level-tag">OLD MODEL</span>
+        <h3>Ручной заработок</h3>
+        <p>
+          Ты меняешь время на деньги. Потолок дохода, выгорание, хаос.
+        </p>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="level-card active" data-animate>
+        <span class="level-tag">AI SYSTEM</span>
+        <h3>Системный доход</h3>
+        <p>
+          AI делает работу за тебя. Ты управляешь процессом и масштабом.
+        </p>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="level-card" data-animate>
+        <span class="level-tag">FUTURE MODE</span>
+        <h3>Подписочные AI-бизнесы</h3>
+        <p>
+          Доход растёт сам. Минимум участия, максимум контроля.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <section>
+  <div class="container" style="text-align:center">
+    <h2 class="big">Забери MASTER KIT AI бесплатно</h2>
+    <h2 class="big">Если не заберёшь сейчас — потеряешь доступ</h2>
+
+    <p class="hero-sub">
+      Мы раздаём MASTER KIT <b>бесплатно только первым 300 участникам</b>,
+      чтобы собрать сильное AI-сообщество.
+    </p>
+
+    <p class="hero-sub">
+      После достижения лимита — доступ будет <b>закрыт или станет платным.</b>
+    </p>
+
+    <a href="https://t.me/YOUR_TG_USERNAME?text=Хочу%204%20AI%20для%20заработка!" class="cta pulse">
+      Забрать бесплатно сейчас →
+    </a>
+    
+
+    <div class="counter">
+  Осталось мест: <span id="slots">87</span> из 300
+</div>
+
+  </div>
+</section>
+
+<footer class="footer-pro">
+  <div class="container">
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>MASTER KIT AI</h3>
+        <p class="footer-tag">Digital Empire System</p>
+      </div>
+
+      <p class="footer-why">
+        MASTER KIT открывается бесплатно как стратегический вход в нашу AI-экосистему. 
+        Мы формируем сильное окружение, показываем результат через практику 
+        и масштабируемся вместе с теми, кто действует.
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 MASTER KIT AI. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+ <div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button data-close="modal" style="
+      position:absolute;
+      top:28px;
+      right:32px;
+      background:none;
+      border:none;
+      font-size:28px;
+      color:#fff;
+      opacity:.7;
+      cursor:pointer;">×</button>
+
+    <h2>
+      Ты в шаге от <span class="gradient">AI-системы дохода</span>
+    </h2>
+
+    <p>
+      Через <b>30 минут</b> ты уже сможешь собрать свою первую AI-связку и запустить путь
+      к <b>системному онлайн-доходу</b>.
+    </p>
+
+    <a href="https://t.me/Sofiya_HR?text=Хочу%204%20AI%20для%20заработка!" class="cta pulse">
+      Забрать бесплатно →
+    </a>
+
+    <div class="counter">
+      Осталось мест: <span id="count">87</span> из 300
+    </div>
+
+    <p style="margin-top:14px;font-size:14px;opacity:.75">
+      <span class="iconify warn-icon" data-icon="ph:warning-circle-bold"></span>
+ Бесплатный доступ только для первых 300
+    </p>
+  </div>
+</div>
+
+
+<div class="modal-overlay" id="quiz">
+  <div class="modal">
+
+    <h2>Ответь на 3 простых вопроса!</h2>
+    <p>Мы уже приготовили 4 AI-системы под тебя — и ещё ты получишь персональный доступ</p>
+
+<div class="quiz-progress"><span id="quizBar"></span></div>
+
+<div id="quiz-step-1">
+  <div class="quiz-step-title">1. Твой текущий уровень</div>
+  <div class="quiz-step-sub">Чтобы подобрать оптимальную AI-систему</div>
+
+<div class="quiz-grid">
+  <button class="quiz-btn" onclick="nextQuiz('novice')">
+    <span class="iconify" data-icon="ph:sparkle-fill"></span>
+    <span>Новичок</span>
+  </button>
+
+  <button class="quiz-btn" onclick="nextQuiz('exp')">
+    <span class="iconify" data-icon="solar:settings-bold"></span>
+    <span>Есть опыт</span>
+  </button>
+
+  <button class="quiz-btn" onclick="nextQuiz('scale')">
+    <span class="iconify" data-icon="ph:trend-up-bold"></span>
+    <span>Хочу масштаб</span>
+  </button>
+</div>
+</div>
+
+<div id="quiz-step-2" style="display:none">
+  <div class="quiz-step-title">2. Твоя главная цель</div>
+  <div class="quiz-step-sub">Мы подберём под неё связку AI</div>
+
+  <div class="quiz-grid">
+  <button class="quiz-btn" onclick="setGoal('money')">
+    <span class="iconify" data-icon="solar:wallet-bold"></span>
+    <span>Быстрый доход</span>
+  </button>
+
+  <button class="quiz-btn" onclick="setGoal('system')">
+    <span class="iconify" data-icon="ph:stack-bold"></span>
+    <span>Системный бизнес</span>
+  </button>
+
+  <button class="quiz-btn" onclick="setGoal('auto')">
+    <span class="iconify" data-icon="solar:cpu-bolt-bold"></span>
+    <span>Полный автомат</span>
+  </button>
+</div>
+</div>
+
+<div id="quiz-step-3" style="display:none">
+  <div class="quiz-step-title">Доступ готов! А ты готов?</div>
+  <div class="quiz-step-sub">PDF + персональная AI-связка под тебя</div>
+
+  <a id="quizLink" class="cta pulse" style="margin-top:18px">
+    Получить MASTER KIT →
+  </a>
+</div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="soldout">
+  <div class="modal soldout-modal">
+
+    <div class="soldout-icon">
+      <span class="iconify" data-icon="ph:lock-key-bold"></span>
+    </div>
+
+    <h2 class="soldout-title">ДОСТУП ЗАКРЫТ</h2>
+
+    <p class="soldout-sub">
+      Все бесплатные места закончились.
+      Но ты можешь оставить заявку и получить доступ,
+      если появится дополнительная квота.
+    </p>
+
+    <div class="soldout-box">
+      <div class="soldout-line">
+        <span class="iconify" data-icon="ph:lightning-bold"></span>
+        Приоритетная очередь
+      </div>
+      <div class="soldout-line">
+        <span class="iconify" data-icon="ph:star-bold"></span>
+        Персональный доступ
+      </div>
+      <div class="soldout-line">
+        <span class="iconify" data-icon="ph:bell-ringing-bold"></span>
+        Уведомление первым
+      </div>
+    </div>
+
+    <a class="soldout-btn pulse"
+      href="https://t.me/YOUR_TG_USERNAME?text=Хочу%20получить%20MASTER%20KIT%20если%20появится%20доступ">
+      Написать менеджеру →
+    </a>
+
+    <div class="soldout-note">
+      Доступ выдаётся вручную • лимит строго ограничен
+    </div>
+
+  </div>
+</div>
+
+
+    
+<script>
+  const modal = document.getElementById('modal');
+
+  setTimeout(() => {
+    modal.classList.add('active');
+  }, 6000);
+
+  function reopenModal() {
+    if (!modal.classList.contains('active')) {
+      modal.classList.add('active');
+    }
+  }
+
+  document.addEventListener('click', e => {
+    if (e.target.dataset.close === 'modal') {
+      modal.classList.remove('active');
+      setTimeout(reopenModal, 60000);
+    }
+  });
+
+// СЧЁТЧИК =====================================
+let slots = localStorage.getItem('slots') || 87;
+slots = parseInt(slots);
+
+const slotEls = document.querySelectorAll('#slots, #count');
+
+function renderSlots(){
+  slotEls.forEach(el=>el.innerText=slots);
+
+  if(slots<=10 && slots>0){
+    slotEls.forEach(el=>{
+      el.style.color='red';
+      el.style.fontSize='28px';
+      el.classList.add('pulse');
+    });
+  }
+
+  if(slots<=0){
+    localStorage.setItem('soldout','1');
+    showSoldOut();
+  }
+}
+
+function reduceSlots(){
+  if(slots>0){
+    slots -= Math.floor(Math.random()*3)+1;
+    if(slots<0) slots=0;
+    localStorage.setItem('slots',slots);
+    renderSlots();
+  }
+}
+
+renderSlots();
+
+setInterval(reduceSlots, Math.random()*12000+8000);
+
+//КВИЗ ==================
+let userType = 'novice';
+let goal = 'money';
+
+function openQuiz(){
+  document.getElementById('quiz').classList.add('active');
+}
+
+function nextQuiz(type){
+  userType = type;
+  document.getElementById('quiz-step-1').style.display='none';
+  document.getElementById('quiz-step-2').style.display='block';
+  setProgress(66);
+}
+
+function setGoal(g){
+  goal = g;
+  document.getElementById('quiz-step-2').style.display='none';
+  document.getElementById('quiz-step-3').style.display='block';
+  setProgress(100);
+
+  let msg = "Хочу 4 AI для заработка! ";
+
+  if(userType==='novice') msg += "Я новичок";
+  if(userType==='exp') msg += "У меня уже есть опыт";
+  if(userType==='scale') msg += "Хочу масштаб и автоматизацию";
+
+  msg += ". Цель: " + goal;
+
+  document.getElementById('quizLink').href =
+    "https://t.me/Sofiya_HR?text=" + encodeURIComponent(msg);
+}
+  
+function showSoldOut(){
+  document.getElementById('soldout').classList.add('active');
+}
+
+if(localStorage.getItem('soldout')==='1'){
+  showSoldOut();
+}
+
+let bar;
+
+document.addEventListener('DOMContentLoaded', () => {
+  bar = document.getElementById('quizBar');
+  setProgress(33);
+});
+
+function setProgress(p){
+  if(!bar) return;
+  bar.style.width = p + '%';
+}
+
+const obs = new IntersectionObserver(e=>{
+  e.forEach(i=>{
+    if(i.isIntersecting) i.target.classList.add('show');
+  })
+},{threshold:.15});
+
+document.querySelectorAll('[data-animate]').forEach(el=>obs.observe(el));
+  
+document.addEventListener('mouseout', e => {
+  if(e.clientY < 0){
+    modal.classList.add('active');
+  }
+});
+</script>
+</body>
+</html>
+ 
