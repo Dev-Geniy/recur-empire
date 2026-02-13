@@ -12,5 +12,6 @@ Landing page for MASTER KIT AI — Digital Empire System.
 - GitHub Pages
 
 ## 🔗 Live Demo
+https://dev-geniy.github.io/recur-empire/
 
 © 2026 MASTER KIT AI
