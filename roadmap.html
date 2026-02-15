@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roadmap — RECUR EMPIRE™</title>
+
+<meta name="description" content="Product and infrastructure roadmap of RECUR EMPIRE™ digital ecosystem.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#05070d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#05070d;
+    --primary:#00f0ff;
+    --accent:#7b3cff;
+    --text:#ffffff;
+    --muted:#8a8fa3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* BACKGROUND GRID */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:60px 60px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(0,240,255,0.15), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(123,60,255,0.15), transparent 60%);
+    z-index:-1;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 60px;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.4);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* LAYOUT */
+.container{
+    max-width:1000px;
+    margin:0 auto;
+    padding:0 30px;
+}
+
+section{
+    padding:160px 0 120px;
+}
+
+/* HEADER */
+.roadmap-header{
+    margin-bottom:80px;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 14px;
+    font-size:12px;
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:30px;
+    color:var(--primary);
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:46px;
+    font-weight:800;
+    line-height:1.2;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.sub{
+    margin-top:20px;
+    color:var(--muted);
+    font-size:16px;
+    max-width:720px;
+}
+
+/* TIMELINE */
+.roadmap{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+.phase{
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:26px;
+    padding:45px 40px;
+    position:relative;
+    transition:0.4s ease;
+}
+
+.phase:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.phase span{
+    font-size:13px;
+    color:var(--primary);
+    letter-spacing:1px;
+    display:block;
+    margin-bottom:12px;
+}
+
+.phase h2{
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.phase ul{
+    padding-left:18px;
+}
+
+.phase li{
+    margin-bottom:12px;
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* DISCLAIMER */
+.roadmap-note{
+    margin-top:80px;
+    font-size:14px;
+    color:var(--muted);
+    text-align:center;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* FOOTER */
+footer{
+    margin-top:120px;
+    padding:40px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.05);
+    background:rgba(0,0,0,0.6);
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    section{
+        padding:140px 0 80px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    .phase{
+        padding:35px 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">RECUR EMPIRE™</div>
+    <a href="/">← Back to Home</a>
+  </div>
+</nav>
+
+<section>
+  <div class="container">
+
+    <div class="roadmap-header">
+      <span class="badge">Product & Infrastructure Vision</span>
+      <h1>Roadmap</h1>
+      <p class="sub">
+        This roadmap outlines the strategic direction of RECUR EMPIRE™.
+        Timelines represent intent and vision, not guaranteed delivery dates.
+      </p>
+    </div>
+
+    <div class="roadmap">
+
+      <div class="phase">
+        <span>Q1 · 2026</span>
+        <h2>Foundation & Public Entry</h2>
+        <ul>
+          <li>Launch of pre-registration for core products</li>
+          <li>Release of the first free infrastructure product</li>
+          <li>Activation of official social media channels</li>
+          <li>Launch of <strong>RECUR CLUB</strong> as a subscription-based product</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <span>Q2 · 2026</span>
+        <h2>Flagship Product Launch</h2>
+        <ul>
+          <li>Release of a professional author-driven product</li>
+          <li>Development of a unique system with no direct market analogs</li>
+          <li>Expansion of paid infrastructure offerings</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <span>Q3 · 2026</span>
+        <h2>Monetization & Partnership Scaling</h2>
+        <ul>
+          <li>Launch of the CPA / Affiliate Partner Program</li>
+          <li>Introduction of recurring partner revenue models</li>
+          <li>Expansion of tracking and payout infrastructure</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <span>Q4 · 2026</span>
+        <h2>Strategic Integrations</h2>
+        <ul>
+          <li>Start of development of partner solutions with key AI-system providers</li>
+          <li>Infrastructure-level integrations with external platforms</li>
+          <li>Preparation for proprietary AI product development</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <span>Q1 · 2027</span>
+        <h2>Proprietary AI Development</h2>
+        <ul>
+          <li>Initiation of development of a proprietary AI product</li>
+          <li>Joint development with selected strategic AI partners</li>
+          <li>Focus on automation, decision systems, and recurring logic</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <span>Q2 · 2027</span>
+        <h2>AI × Crypto Infrastructure</h2>
+        <ul>
+          <li>Development of a first-of-its-kind integration of AI with crypto solutions</li>
+          <li>Unified system for subscription payments and partner payouts</li>
+          <li>Implementation of bonus logic, contribution-based rewards, and participation shares</li>
+          <li>Flexible percentage models tied to ecosystem growth and involvement</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="roadmap-note">
+      This roadmap is subject to change based on strategic priorities,
+      market conditions, technological advancements, and regulatory factors.
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 RECUR EMPIRE™ · Roadmap & Vision
+</footer>
+
+</body>
+</html>
