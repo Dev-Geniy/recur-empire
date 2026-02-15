@@ -313,7 +313,7 @@ nav a{
 </div>
 <script>
 /* =========================
-   STATE
+   STATE (ВСЕГДА СНАЧАЛА)
 ========================= */
 let selectedPlan = "monthly";
 let price = 19;
@@ -321,19 +321,52 @@ let billingText = "Monthly";
 let paymentMethod = "stripe";
 
 /* =========================
-   PLAN SELECTION
+   ELEMENTS
 ========================= */
 const planOptions = document.querySelectorAll(".plan-option");
 const priceLine = document.querySelector(".summary .line span:last-child");
 const billingLine = document.querySelectorAll(".line")[1].querySelector("span:last-child");
 const totalAmount = document.querySelector(".total strong");
 
+/* =========================
+   READ PLAN FROM URL
+========================= */
+const params = new URLSearchParams(window.location.search);
+const planFromUrl = params.get("plan");
+
+/* =========================
+   APPLY PLAN FROM URL
+========================= */
+if (planFromUrl === "yearly") {
+    selectedPlan = "yearly";
+    price = 199;
+    billingText = "Yearly";
+
+    planOptions[0].classList.remove("active");
+    planOptions[1].classList.add("active");
+} else {
+    selectedPlan = "monthly";
+    price = 19;
+    billingText = "Monthly";
+
+    planOptions[0].classList.add("active");
+    planOptions[1].classList.remove("active");
+}
+
+/* Sync UI */
+priceLine.innerText = "$" + price;
+billingLine.innerText = billingText;
+totalAmount.innerText = "$" + price;
+
+/* =========================
+   PLAN SWITCH (CLICK)
+========================= */
 planOptions.forEach((option, index) => {
     option.addEventListener("click", () => {
         planOptions.forEach(o => o.classList.remove("active"));
         option.classList.add("active");
 
-        if(index === 0){
+        if (index === 0) {
             selectedPlan = "monthly";
             price = 19;
             billingText = "Monthly";
@@ -346,17 +379,20 @@ planOptions.forEach((option, index) => {
         priceLine.innerText = "$" + price;
         billingLine.innerText = billingText;
         totalAmount.innerText = "$" + price;
+
+        // update URL without reload
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.set("plan", selectedPlan);
+        window.history.replaceState({}, "", newUrl);
     });
 });
 
 /* =========================
    PAYMENT METHOD
 ========================= */
-const methods = document.querySelectorAll(".method");
-
-methods.forEach(method => {
+document.querySelectorAll(".method").forEach(method => {
     method.addEventListener("click", () => {
-        methods.forEach(m => m.classList.remove("active"));
+        document.querySelectorAll(".method").forEach(m => m.classList.remove("active"));
         method.classList.add("active");
         paymentMethod = method.dataset.method;
     });
@@ -366,7 +402,7 @@ methods.forEach(method => {
    PAY BUTTON
 ========================= */
 document.querySelector(".pay-btn").addEventListener("click", () => {
-    if(paymentMethod === "stripe"){
+    if (paymentMethod === "stripe") {
         startStripePayment();
     } else {
         startCryptoPayment();
@@ -374,49 +410,25 @@ document.querySelector(".pay-btn").addEventListener("click", () => {
 });
 
 /* =========================
-   STRIPE FLOW (PLACEHOLDER)
+   STRIPE (PLACEHOLDER)
 ========================= */
 function startStripePayment(){
     alert(
         "Stripe Payment\n\n" +
         "Plan: " + selectedPlan + "\n" +
-        "Amount: $" + price + "\n\n" +
-        "→ Create Stripe Checkout Session here"
+        "Amount: $" + price
     );
-
-    /*
-    fetch('/api/stripe/create-session', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({ plan: selectedPlan })
-    })
-    .then(res => res.json())
-    .then(data => window.location.href = data.checkoutUrl);
-    */
 }
 
 /* =========================
-   CRYPTO FLOW (PLACEHOLDER)
+   CRYPTO (PLACEHOLDER)
 ========================= */
 function startCryptoPayment(){
     alert(
         "Crypto Payment\n\n" +
         "Plan: " + selectedPlan + "\n" +
-        "Amount: $" + price + "\n\n" +
-        "→ Show wallet / QR / network selection"
+        "Amount: $" + price
     );
-
-    /*
-    fetch('/api/crypto/create-invoice', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({ plan: selectedPlan })
-    })
-    .then(res => res.json())
-    .then(data => {
-        // show QR / wallet address
-    });
-    */
 }
 </script>
 
