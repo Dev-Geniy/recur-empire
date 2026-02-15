@@ -1,1 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>CPA Partnership — RECUR EMPIRE™</title>
+
+<meta name="description" content="Join the RECUR EMPIRE™ CPA Partnership Program. Earn up to 40% recurring commissions by promoting AI-powered digital infrastructure products.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#05070d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#05070d;
+    --primary:#00f0ff;
+    --accent:#7b3cff;
+    --text:#ffffff;
+    --muted:#8a8fa3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:60px 60px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(0,240,255,0.15), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(123,60,255,0.15), transparent 60%);
+    z-index:-1;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 60px;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.4);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* LAYOUT */
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 30px;
+}
+
+section{
+    padding:160px 0 120px;
+}
+
+/* HEADER */
+.partner-hero{
+    margin-bottom:100px;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 14px;
+    font-size:12px;
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:30px;
+    color:var(--primary);
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:48px;
+    font-weight:800;
+    line-height:1.15;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.sub{
+    margin-top:25px;
+    font-size:18px;
+    color:var(--muted);
+    max-width:760px;
+}
+
+/* GRID */
+.partner-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin-bottom:100px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:26px;
+    padding:45px 40px;
+    transition:0.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.card h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* STEPS */
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-bottom:120px;
+}
+
+.step{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:22px;
+    padding:35px 30px;
+}
+
+.step span{
+    color:var(--primary);
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+.step h4{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.step p{
+    font-size:14px;
+    color:var(--muted);
+}
+
+/* CTA */
+.cta{
+    text-align:center;
+    margin-bottom:100px;
+}
+
+.cta a{
+    display:inline-block;
+    padding:18px 38px;
+    border-radius:40px;
+    font-weight:600;
+    font-size:16px;
+    text-decoration:none;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    color:#000;
+    transition:0.3s;
+}
+
+.cta a:hover{
+    opacity:0.85;
+}
+
+/* DISCLAIMER */
+.note{
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    max-width:800px;
+    margin:0 auto;
+}
+
+/* FOOTER */
+footer{
+    margin-top:120px;
+    padding:40px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.05);
+    background:rgba(0,0,0,0.6);
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:1024px){
+    .partner-grid{
+        grid-template-columns:1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:768px){
+    section{
+        padding:140px 0 80px;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">RECUR EMPIRE™</div>
+    <a href="/">← Back to Home</a>
+  </div>
+</nav>
+
+<section>
+  <div class="container">
+
+    <div class="partner-hero">
+      <span class="badge">CPA Partnership Program</span>
+      <h1>Build Recurring Income<br>as a RECUR Partner</h1>
+      <p class="sub">
+        Join the RECUR EMPIRE™ partnership program and earn up to
+        <strong>40% recurring commissions</strong> by promoting
+        AI-powered digital infrastructure products.
+      </p>
+    </div>
+
+    <div class="partner-grid">
+      <div class="card">
+        <h3>Up to 40% Revenue Share</h3>
+        <p>
+          Earn up to 40% from net revenue generated through your referrals.
+          Commissions apply to eligible products and recurring subscriptions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Recurring by Design</h3>
+        <p>
+          Our products are built around subscription and recurring logic,
+          allowing partners to benefit from long-term customer value.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Infrastructure-Level Products</h3>
+        <p>
+          Promote systems, not hype. RECUR EMPIRE™ products are designed
+          as digital infrastructure for creators, founders, and teams.
+        </p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span>STEP 01</span>
+        <h4>Join the Program</h4>
+        <p>
+          Apply and receive access to the RECUR EMPIRE™ partner ecosystem.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>STEP 02</span>
+        <h4>Get Your Referral Link</h4>
+        <p>
+          Use your unique tracking link to promote products and systems.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>STEP 03</span>
+        <h4>Drive Value</h4>
+        <p>
+          Share infrastructure products with audiences aligned
+          to long-term digital growth.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>STEP 04</span>
+        <h4>Request Payouts</h4>
+        <p>
+          Submit payout requests manually under the Payout Policy.
+        </p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="/legal/affiliate-terms.html">Apply for Partnership →</a>
+    </div>
+
+    <div class="note">
+      This partnership program does not guarantee income.
+      Commissions, products, and terms are subject to change
+      according to Affiliate Terms and Payout Policy.
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 RECUR EMPIRE™ · CPA & Partnership Program
+</footer>
+
+</body>
+</html>
