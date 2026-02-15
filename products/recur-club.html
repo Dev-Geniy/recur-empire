@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RECUR CLUB — Private Recurring Income Community</title>
+
+<meta name="description" content="RECUR CLUB is a private subscription-based community focused on AI-powered recurring income, CPA partnerships, and infrastructure insights.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#05070d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#05070d;
+    --primary:#00f0ff;
+    --accent:#7b3cff;
+    --text:#ffffff;
+    --muted:#8a8fa3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:60px 60px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(0,240,255,0.15), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(123,60,255,0.15), transparent 60%);
+    z-index:-1;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 60px;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.4);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* LAYOUT */
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 30px;
+}
+
+section{
+    padding:160px 0 120px;
+}
+
+/* HERO */
+.club-hero{
+    margin-bottom:120px;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 14px;
+    font-size:12px;
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:30px;
+    color:var(--primary);
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:50px;
+    font-weight:800;
+    line-height:1.1;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.sub{
+    margin-top:25px;
+    font-size:18px;
+    color:var(--muted);
+    max-width:760px;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin-bottom:120px;
+}
+
+.feature{
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:26px;
+    padding:45px 40px;
+    transition:0.4s ease;
+}
+
+.feature:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.feature h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.feature p{
+    font-size:15px;
+    color:var(--muted);
+    line-height:1.7;
+}
+
+/* PRICING */
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+    margin-bottom:120px;
+}
+
+.price-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
+    padding:50px 45px;
+    text-align:center;
+}
+
+.price{
+    font-size:42px;
+    font-weight:800;
+    margin:20px 0;
+    color:var(--primary);
+}
+
+.price small{
+    font-size:16px;
+    color:var(--muted);
+}
+
+.price-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:16px 36px;
+    border-radius:40px;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    color:#000;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* PARTNER */
+.partner-block{
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:26px;
+    padding:60px 50px;
+    margin-bottom:100px;
+}
+
+.partner-block h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.partner-block p{
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.7;
+}
+
+/* DISCLAIMER */
+.note{
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    max-width:820px;
+    margin:0 auto;
+}
+
+/* FOOTER */
+footer{
+    margin-top:120px;
+    padding:40px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.05);
+    background:rgba(0,0,0,0.6);
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:1024px){
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .pricing{
+        grid-template-columns:1fr;
+    }
+}
+
+/* KEEP PRICING 2 COLUMNS ON MOBILE */
+@media(max-width:768px){
+    .pricing{
+        grid-template-columns:repeat(2, 1fr);
+        gap:20px;
+    }
+
+    .price-card{
+        padding:35px 20px;
+    }
+
+    .price{
+        font-size:32px;
+    }
+}
+
+@media(max-width:768px){
+    section{
+        padding:140px 0 80px;
+    }
+
+    h1{
+        font-size:34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">RECUR EMPIRE™</div>
+    <a href="/">← Back to platform</a>
+  </div>
+</nav>
+
+<section>
+  <div class="container">
+
+    <div class="club-hero">
+      <span class="badge">Private Subscription Product</span>
+      <h1>RECUR CLUB</h1>
+      <p class="sub">
+        A private members-only community focused on building
+        <strong>AI-powered recurring income</strong> through
+        partner programs, subscription logic, and infrastructure thinking.
+      </p>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <h3>Closed Community & Insights</h3>
+        <p>
+          Access a private environment with curated insights,
+          strategies, and discussions around recurring income
+          and AI partnership ecosystems.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>VIP Partner Status</h3>
+        <p>
+          RECUR CLUB members receive VIP partner status,
+          priority access to CPA opportunities, and early product launches.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>Support & Consultations</h3>
+        <p>
+          Priority technical support, personal consultations,
+          and direct guidance on infrastructure and monetization topics.
+        </p>
+      </div>
+    </div>
+
+    <div class="pricing">
+      <div class="price-card">
+        <h3>Monthly Access</h3>
+        <div class="price">$19 <small>/ month</small></div>
+        <a href="#" class="price-btn">Join Monthly</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Annual Access</h3>
+        <div class="price">$199 <small>/ year</small></div>
+        <a href="#" class="price-btn">Join Yearly</a>
+      </div>
+    </div>
+
+    <div class="partner-block">
+      <h2>Earn as a Partner</h2>
+      <p>
+        RECUR CLUB members are eligible to participate in the
+        RECUR EMPIRE™ CPA partnership program, earning recurring
+        commissions by promoting infrastructure products and subscriptions.
+      </p>
+    </div>
+
+    <div class="note">
+      RECUR CLUB does not guarantee income or financial results.
+      Access provides education, insights, and partnership opportunities
+      under applicable Affiliate Terms and Payout Policy.
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 RECUR EMPIRE™ · RECUR CLUB
+</footer>
+
+</body>
+</html>
