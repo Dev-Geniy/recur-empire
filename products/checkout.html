@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout — RECUR CLUB</title>
+
+<meta name="description" content="Secure checkout interface for RECUR CLUB subscription.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#05070d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#05070d;
+    --primary:#00f0ff;
+    --accent:#7b3cff;
+    --text:#ffffff;
+    --muted:#8a8fa3;
+    --card:rgba(255,255,255,0.05);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* BACKGROUND */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:60px 60px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(0,240,255,0.15), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(123,60,255,0.15), transparent 60%);
+    z-index:-1;
+}
+
+/* NAV */
+nav{
+    padding:20px 60px;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.45);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* LAYOUT */
+.checkout{
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 30px;
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:60px;
+}
+
+/* LEFT */
+.checkout-left h1{
+    font-size:42px;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.checkout-left p{
+    margin-top:20px;
+    color:var(--muted);
+    font-size:16px;
+    max-width:520px;
+}
+
+/* PLAN SELECT */
+.plan{
+    margin-top:50px;
+}
+
+.plan-option{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.plan-option:hover{
+    border-color:var(--primary);
+}
+
+.plan-option.active{
+    border-color:var(--primary);
+    box-shadow:0 0 30px rgba(0,240,255,0.2);
+}
+
+.plan-option h3{
+    font-size:20px;
+}
+
+.plan-option span{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.plan-option p{
+    margin-top:10px;
+    font-size:14px;
+    color:var(--muted);
+}
+
+/* RIGHT */
+.checkout-right{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
+    padding:40px 35px;
+}
+
+.summary h3{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.line{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+    font-size:14px;
+    color:var(--muted);
+}
+
+.total{
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:20px;
+    margin-top:20px;
+    font-size:18px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.total strong{
+    color:var(--primary);
+}
+
+/* BUTTON */
+.pay-btn{
+    margin-top:35px;
+    width:100%;
+    padding:18px;
+    border-radius:40px;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    border:none;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.pay-note{
+    margin-top:20px;
+    font-size:12px;
+    color:var(--muted);
+    text-align:center;
+}
+  
+.payment-methods{
+    margin-top:30px;
+}
+
+.method{
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:14px;
+    padding:14px 18px;
+    margin-bottom:12px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.method.active{
+    border-color:var(--primary);
+    box-shadow:0 0 20px rgba(0,240,255,0.2);
+}
+
+/* MOBILE */
+@media(max-width:1024px){
+    .checkout{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+    .checkout-left h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">RECUR EMPIRE™</div>
+    <a href="/recur-club.html">← Back to RECUR CLUB</a>
+  </div>
+</nav>
+
+<div class="checkout">
+
+  <!-- LEFT -->
+  <div class="checkout-left">
+    <h1>Checkout</h1>
+    <p>
+      Secure access to <strong>RECUR CLUB</strong> —
+      private infrastructure community for AI-powered recurring income.
+    </p>
+
+    <div class="plan">
+      <div class="plan-option active">
+        <h3>Monthly Membership</h3>
+        <span>$19 / month</span>
+        <p>Flexible access · Cancel anytime</p>
+      </div>
+
+      <div class="plan-option">
+        <h3>Annual Membership</h3>
+        <span>$199 / year</span>
+        <p>Save over 12 months · Priority access</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="checkout-right">
+    <div class="summary">
+      <h3>Order Summary</h3>
+
+      <div class="line">
+        <span>RECUR CLUB</span>
+        <span>$19</span>
+      </div>
+
+      <div class="line">
+        <span>Billing</span>
+        <span>Monthly</span>
+      </div>
+
+      <div class="total">
+        <span>Total</span>
+        <strong>$19</strong>
+      </div>
+
+      <div class="payment-methods">
+          <div class="method active" data-method="stripe">
+        💳 Card (Stripe)
+          </div>
+          <div class="method" data-method="crypto">
+        🔗 Crypto (USDT / ETH / BTC)
+          </div>
+      </div>
+
+      <button class="pay-btn">Proceed to Payment</button>
+
+      <div class="pay-note">
+        Payments are processed securely.<br>
+        No financial guarantees. Subscription terms apply.
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+/* =========================
+   STATE
+========================= */
+let selectedPlan = "monthly";
+let price = 19;
+let billingText = "Monthly";
+let paymentMethod = "stripe";
+
+/* =========================
+   PLAN SELECTION
+========================= */
+const planOptions = document.querySelectorAll(".plan-option");
+const priceLine = document.querySelector(".summary .line span:last-child");
+const billingLine = document.querySelectorAll(".line")[1].querySelector("span:last-child");
+const totalAmount = document.querySelector(".total strong");
+
+planOptions.forEach((option, index) => {
+    option.addEventListener("click", () => {
+        planOptions.forEach(o => o.classList.remove("active"));
+        option.classList.add("active");
+
+        if(index === 0){
+            selectedPlan = "monthly";
+            price = 19;
+            billingText = "Monthly";
+        } else {
+            selectedPlan = "yearly";
+            price = 199;
+            billingText = "Yearly";
+        }
+
+        priceLine.innerText = "$" + price;
+        billingLine.innerText = billingText;
+        totalAmount.innerText = "$" + price;
+    });
+});
+
+/* =========================
+   PAYMENT METHOD
+========================= */
+const methods = document.querySelectorAll(".method");
+
+methods.forEach(method => {
+    method.addEventListener("click", () => {
+        methods.forEach(m => m.classList.remove("active"));
+        method.classList.add("active");
+        paymentMethod = method.dataset.method;
+    });
+});
+
+/* =========================
+   PAY BUTTON
+========================= */
+document.querySelector(".pay-btn").addEventListener("click", () => {
+    if(paymentMethod === "stripe"){
+        startStripePayment();
+    } else {
+        startCryptoPayment();
+    }
+});
+
+/* =========================
+   STRIPE FLOW (PLACEHOLDER)
+========================= */
+function startStripePayment(){
+    alert(
+        "Stripe Payment\n\n" +
+        "Plan: " + selectedPlan + "\n" +
+        "Amount: $" + price + "\n\n" +
+        "→ Create Stripe Checkout Session here"
+    );
+
+    /*
+    fetch('/api/stripe/create-session', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ plan: selectedPlan })
+    })
+    .then(res => res.json())
+    .then(data => window.location.href = data.checkoutUrl);
+    */
+}
+
+/* =========================
+   CRYPTO FLOW (PLACEHOLDER)
+========================= */
+function startCryptoPayment(){
+    alert(
+        "Crypto Payment\n\n" +
+        "Plan: " + selectedPlan + "\n" +
+        "Amount: $" + price + "\n\n" +
+        "→ Show wallet / QR / network selection"
+    );
+
+    /*
+    fetch('/api/crypto/create-invoice', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ plan: selectedPlan })
+    })
+    .then(res => res.json())
+    .then(data => {
+        // show QR / wallet address
+    });
+    */
+}
+</script>
+
+</body>
+</html>
