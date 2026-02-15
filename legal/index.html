@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Legal Center — RECUR EMPIRE™</title>
+
+<meta name="description" content="Legal documentation and policies of RECUR EMPIRE™ digital infrastructure platform.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#05070d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#05070d;
+    --primary:#00f0ff;
+    --accent:#7b3cff;
+    --text:#ffffff;
+    --muted:#8a8fa3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* BACKGROUND GRID */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:60px 60px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(0,240,255,0.15), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(123,60,255,0.15), transparent 60%);
+    z-index:-1;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 60px;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.4);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* LAYOUT */
+.container{
+    max-width:1000px;
+    margin:0 auto;
+    padding:0 30px;
+}
+
+section{
+    padding:160px 0 120px;
+}
+
+/* HEADER */
+.legal-header{
+    margin-bottom:70px;
+}
+
+.legal-badge{
+    display:inline-block;
+    padding:6px 14px;
+    font-size:12px;
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:30px;
+    color:var(--primary);
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:46px;
+    font-weight:800;
+    line-height:1.2;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.legal-sub{
+    margin-top:20px;
+    color:var(--muted);
+    font-size:16px;
+    max-width:700px;
+}
+
+/* GRID */
+.legal-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+/* CARD */
+.legal-card{
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:24px;
+    padding:40px 35px;
+    transition:0.4s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.legal-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+}
+
+.legal-card h2{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.legal-card p{
+    font-size:14px;
+    color:var(--muted);
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.legal-card a{
+    font-size:14px;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.legal-card a:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+    margin-top:100px;
+    padding:40px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.05);
+    background:rgba(0,0,0,0.6);
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:1024px){
+    .legal-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:768px){
+    section{
+        padding:140px 0 80px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    .legal-grid{
+        grid-template-columns:1fr;
+    }
+
+    .legal-card{
+        padding:35px 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">RECUR EMPIRE™</div>
+    <a href="/">← Back to Home</a>
+  </div>
+</nav>
+
+<section>
+  <div class="container">
+
+    <div class="legal-header">
+      <span class="legal-badge">Legal Infrastructure</span>
+      <h1>Legal Center</h1>
+      <p class="legal-sub">
+        This section provides access to the legal documentation governing
+        the use of RECUR EMPIRE™ digital infrastructure and ecosystem.
+      </p>
+    </div>
+
+    <div class="legal-grid">
+
+      <div class="legal-card">
+        <h2>Terms of Use</h2>
+        <p>
+          Governs access to and use of the RECUR EMPIRE™ platform,
+          services, systems, and infrastructure.
+        </p>
+        <a href="/legal/terms.html">Read Terms of Use →</a>
+      </div>
+
+      <div class="legal-card">
+        <h2>Privacy Policy</h2>
+        <p>
+          Explains how personal and technical data is collected,
+          processed, and protected within the platform.
+        </p>
+        <a href="/legal/privacy.html">Read Privacy Policy →</a>
+      </div>
+
+      <div class="legal-card">
+        <h2>Disclaimer</h2>
+        <p>
+          Defines financial, legal, and operational limitations,
+          risks, and user responsibilities.
+        </p>
+        <a href="/legal/disclaimer.html">Read Disclaimer →</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 RECUR EMPIRE™ · Legal Infrastructure
+</footer>
+
+</body>
+</html>
