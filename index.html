@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- TODO: если будет мультиязычность — поменять на "x-default" -->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RECUR EMPIRE™ — AI Recurring Revenue Infrastructure</title>
+  
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width">
+
+<meta name="copyright" content="© 2026 RECUR EMPIRE™">
+<meta name="classification" content="Business Infrastructure Platform">
+<meta name="target" content="Founders, Entrepreneurs, Investors">
+
+  
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"RECUR EMPIRE™",
+ "url":"https://recur-empire.com",
+ "potentialAction":{
+   "@type":"SearchAction",
+   "target":"https://recur-empire.com/?s={search_term_string}",
+   "query-input":"required name=search_term_string"
+ }
+}
+</script>
+
+<!-- TODO: при масштабировании можно A/B тестировать title под CPA / SEO -->
+
+<!-- ==================================================
+     BASE SEO (обязательно)
+================================================== -->
+<meta name="description" content="RECUR EMPIRE™ is a digital infrastructure company engineering AI-powered recurring revenue systems, subscription architectures, and scalable SaaS ecosystems.">
+<!-- TODO: обновить description под конкретные продукты, когда они появятся -->
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="RECUR EMPIRE™">
+<meta name="language" content="en">
+<meta name="revisit-after" content="7 days">
+
+<!-- ==================================================
+     CANONICAL & DOMAIN CONTROL
+================================================== -->
+<link rel="canonical" href="https://recur-empire.com/">
+<!-- TODO: заменить на финальный домен после выбора -->
+
+<!-- ==================================================
+     HREFLANG — MULTI-LANGUAGE / GLOBAL
+================================================== -->
+
+<link rel="alternate" hreflang="en" href="https://recur-empire.com/en/">
+<!-- TODO: заменить /en/ на реальный путь англ. версии -->
+
+<link rel="alternate" hreflang="ru" href="https://recur-empire.com/ru/">
+<!-- TODO: заменить /ru/ на реальный путь русской версии -->
+
+<link rel="alternate" hreflang="x-default" href="https://recur-empire.com/">
+<!-- Глобальная версия, если язык не определён -->
+  
+<!-- ==================================================
+     GEO / DISTRIBUTION (не критично, но усиливает trust)
+================================================== -->
+<meta name="geo.region" content="EU">
+<meta name="geo.placename" content="Global">
+<meta name="distribution" content="global">
+<!-- TODO: если будет юр. привязка (US / UAE / EU) — обновить -->
+
+<!-- ==================================================
+     OPEN GRAPH (соцсети, мессенджеры)
+================================================== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RECUR EMPIRE™">
+<meta property="og:title" content="RECUR EMPIRE™ — Engineering Recurring Revenue Systems">
+<meta property="og:description" content="AI-powered infrastructure for scalable recurring income models, subscription ecosystems, and digital assets.">
+<meta property="og:url" content="https://recur-empire.com/">
+<!-- TODO: заменить URL на финальный домен -->
+
+<meta property="og:image" content="https://recur-empire.com/og-cover.jpg">
+<!-- TODO: заменить на реальный OG-баннер 1200x630 -->
+
+<!-- ==================================================
+     TWITTER / X (инвесторы, founders, Web3)
+================================================== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RECUR EMPIRE™">
+<meta name="twitter:description" content="Digital infrastructure engineering AI-driven recurring revenue systems.">
+<meta name="twitter:image" content="https://recur-empire.com/og-cover.jpg">
+<!-- TODO: использовать тот же OG image -->
+
+<!-- ==================================================
+     BRAND / APP SIGNALS (ощущение платформы)
+================================================== -->
+<meta name="application-name" content="RECUR EMPIRE™">
+<meta name="theme-color" content="#05070d">
+<meta name="apple-mobile-web-app-title" content="RECUR EMPIRE™">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!-- ==================================================
+     STRUCTURED DATA — ORGANIZATION (САМОЕ ВАЖНОЕ)
+================================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "RECUR EMPIRE™",
+  "url": "https://recur-empire.com",
+  "logo": "https://recur-empire.com/logo.png",
+  "description": "Digital infrastructure company engineering AI-powered recurring revenue systems and scalable subscription architectures.",
+  "foundingDate": "2026",
+  "industry": "AI Infrastructure / SaaS / Digital Systems",
+  "sameAs": [
+    "https://t.me/recur_empire",
+    "https://linkedin.com/company/recur-empire"
+  ]
+}
+</script>
+<!-- TODO: добавить X / GitHub / Medium при появлении -->
+
+<!-- ==================================================
+     STRUCTURED DATA — PRODUCT (RECUR SYSTEM™)
+================================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "RECUR SYSTEM™",
+  "brand": {
+    "@type": "Organization",
+    "name": "RECUR EMPIRE™"
+  },
+  "description": "Infrastructure system for engineering AI-powered recurring revenue models, subscription architectures, and scalable digital income ecosystems.",
+  "category": "Software / Digital Infrastructure",
+  "url": "https://recur-empire.com/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+
+<!-- TODO:
+     - когда появится платная версия — изменить price
+     - можно добавить AggregateRating в будущем
+-->
+
+<!-- ==================================================
+     INVESTOR / SECURITY / PERFORMANCE
+================================================== -->
+<meta name="rating" content="general">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- ==================================================
+     FONTS / ASSETS
+================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<link rel="preload" href="style.css" as="style">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-container">
+    <div class="logo">RECUR EMPIRE™</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">RECUR EMPIRE™</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#partnership">Partnership</a></li>
+        <li><a href="#join" class="btn btn-primary">Start</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+<div class="container hero-container">
+
+    <div class="hero-left">
+        <div class="badge">
+            Digital Infrastructure Company
+        </div>
+
+        <h1>
+            We Engineer <br>
+            Recurring Revenue <br>
+            Systems
+        </h1>
+
+<p class="hero-sub">
+    MASTER KIT RECUR EMPIRE™ — digital infrastructure company
+    engineering AI-powered recurring revenue systems.
+    <br><br>
+    <span style="opacity:0.6;font-size:16px;">
+Predictable. Scalable. Automated.
+Infrastructure for digital recurring empires.
+</span>
+</p>
+
+
+
+        <div class="hero-buttons">
+            <a href="#join" class="btn btn-primary">Start Free</a>
+            <a href="#products" class="btn btn-primary">Explore Products</a>
+            <a href="#partnership" class="btn btn-outline">Activate CPA Access</a>
+        </div>
+
+        <div class="hero-stats">
+            <div>
+                <h3>AI</h3>
+                <span>Automation Core</span>
+            </div>
+            <div>
+                <h3>MRR</h3>
+                <span>Recurring Models</span>
+            </div>
+            <div>
+                <h3>∞</h3>
+                <span>Scalable Systems</span>
+            </div>
+        </div>
+    </div>
+
+<div class="hero-right">
+    <div class="tech-orb" id="orb">
+        <div class="orb-letter">R</div>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="about" class="about-pro">
+<div class="container">
+
+    <div class="about-grid">
+
+        <div class="about-left">
+            <h2>Инфраструктура цифровой стабильности</h2>
+            <p>
+                RECUR EMPIRE™ — это не образовательный проект.
+                Это системная архитектура создания цифровых активов
+                с предсказуемым ежемесячным доходом.
+            </p>
+            <p>
+                Мы проектируем экосистемы,
+                а не разовые схемы.
+            </p>
+        </div>
+
+        <div class="about-right">
+            <div class="about-box">
+                <h3>01</h3>
+                <span>AI Automation</span>
+            </div>
+            <div class="about-box">
+                <h3>02</h3>
+                <span>Recurring Logic</span>
+            </div>
+            <div class="about-box">
+                <h3>03</h3>
+                <span>System Scaling</span>
+            </div>
+        </div>
+
+    </div>
+
+  </div>
+
+  </section>
+
+
+<section id="products">
+<div class="container">
+
+    <h2>Продукты</h2>
+    <div class="grid">
+        <div class="card pro-card">
+    <h3>RECUR SYSTEM™</h3>
+    <p>Архитектура построения рекуррентных моделей.</p>
+    <span class="tag">Core Infrastructure</span>
+</div>
+
+<div class="card pro-card">
+    <h3>AI CONTENT ENGINE</h3>
+    <p>AI-движок масштабируемого производства контента.</p>
+    <span class="tag">Automation</span>
+</div>
+
+<div class="card pro-card">
+    <h3>RECUR CLUB</h3>
+    <p>Закрытая подписочная экосистема роста.</p>
+    <span class="tag">Subscription Model</span>
+</div>
+
+      
+    </div>
+  </div>
+</section>
+
+<section id="team" class="team-pro">
+<div class="container">
+
+    <div class="team-header">
+        <h2>Leadership & Core Architecture Team</h2>
+        <p>
+            Команда, проектирующая инфраструктуру рекуррентных систем,
+            AI-автоматизацию и масштабируемые цифровые экосистемы.
+        </p>
+    </div>
+
+    <div class="team-grid">
+
+<div class="team-card">
+
+    <div class="bg-number">01</div>
+
+    <div class="avatar-pro"></div>
+
+    <span class="role-badge">Founder</span>
+    <h3>System Architect</h3>
+
+    <div class="bio">
+        Проектирование архитектуры рекуррентных систем,
+        моделирование цифровых активов,
+        стратегическое развитие экосистемы RECUR EMPIRE™.
+    </div>
+
+    <div class="socials">
+        <a href="#" target="_blank">in</a>
+        <a href="#" target="_blank">tg</a>
+    </div>
+
+</div>
+      
+<div class="team-card">
+
+    <div class="bg-number">02</div>
+
+    <div class="avatar-pro"></div>
+
+    <span class="role-badge">Co-Founder</span>
+    <h3>AI Infrastructure</h3>
+
+    <div class="bio">
+        Разработка AI-автоматизации,
+        построение контентных и аналитических движков,
+        масштабирование AI-сервисов внутри экосистемы.
+    </div>
+
+    <div class="socials">
+        <a href="#" target="_blank">in</a>
+        <a href="#" target="_blank">tg</a>
+    </div>
+
+</div>
+
+<div class="team-card">
+
+    <div class="bg-number">03</div>
+
+    <div class="avatar-pro"></div>
+
+    <span class="role-badge">Co-Founder</span>
+    <h3>Growth & Scaling</h3>
+
+    <div class="bio">
+        Стратегии роста и монетизации,
+        масштабирование подписочных моделей,
+        развитие партнёрских и CPA-инфраструктур.
+    </div>
+
+    <div class="socials">
+        <a href="#" target="_blank">in</a>
+        <a href="#" target="_blank">tg</a>
+    </div>
+
+</div>
+      
+    </div>
+
+</section>
+
+<section id="partnership" class="partner-pro">
+<div class="container">
+
+    <div class="partner-wrapper">
+
+        <div class="partner-left">
+            <span class="partner-badge">CPA Infrastructure</span>
+
+            <h2>Партнёрский кабинет RECUR EMPIRE™</h2>
+
+            <p class="partner-lead">
+                Подключайтесь к нашей CPA-модели и получайте
+                вознаграждение за привлечение партнёров в экосистему.
+            </p>
+
+            <ul class="partner-benefits">
+                <li>✓ Персональная реферальная ссылка</li>
+                <li>✓ Отслеживание конверсий</li>
+                <li>✓ Прозрачная система начислений</li>
+                <li>✓ Масштабируемый AI-продукт</li>
+            </ul>
+
+            <div class="partner-buttons">
+                <a href="#join" class="btn btn-primary">
+    Войти в партнёрский кабинет →
+                </a>
+                <a href="#" class="btn btn-secondary js-open-cpa-modal">
+    Узнать условия CPA
+                </a>
+            </div>
+          <div class="partner-note">
+Early partners lock higher CPA tiers
+before public scaling phase.
+</div>
+
+        </div>
+
+        <div class="partner-right">
+            <div class="partner-card">
+                <h3>Модель дохода</h3>
+
+                <div class="partner-stats">
+                    <div>
+                        <span>CPA</span>
+                        <strong>до 40%</strong>
+                    </div>
+                    <div>
+                        <span>Повторные выплаты</span>
+                        <strong>Recurring</strong>
+                    </div>
+                    <div>
+                        <span>Формат</span>
+                        <strong>Digital</strong>
+                    </div>
+                </div>
+
+                <div class="partner-note">
+                    Инфраструктура построена для долгосрочного
+                    партнёрского дохода.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="join">
+<div class="container">
+
+    <h2>Присоединяйтесь к RECUR EMPIRE™</h2>
+      <div class="grid">
+        
+        <div class="pro-entry">
+
+            <div class="pro-entry-content">
+                <h3>Начните бесплатно</h3>
+                <p>
+                    Получите MASTER KIT — стратегическую систему запуска
+            рекуррентной модели дохода с использованием AI.
+                </p>
+
+        <ul class="pro-benefits">
+            <li>✓ Архитектура модели</li>
+            <li>✓ AI-инструменты</li>
+            <li>✓ Готовая структура запуска</li>
+        </ul>
+
+        <a href="https://dev-geniy.github.io/recur-empire/free-master-kit" 
+           target="_blank" 
+           class="pro-btn">
+           Enter free MASTER KIT →
+        </a>
+
+        <span class="pro-note">
+            Это официальный вход в экосистему RECUR EMPIRE™
+        </span>
+    </div>
+
+</div>
+      
+    </div>
+  </div>
+</section>
+
+<footer class="infra-footer">
+
+  <!-- TOP -->
+  <div class="container footer-main">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="footer-logo">RECUR EMPIRE™</div>
+      <p>
+        Digital infrastructure engineering<br>
+        AI-powered recurring revenue systems.
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-nav">
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="#products">RECUR SYSTEM™</a>
+        <a href="#products">AI Content Engine</a>
+        <a href="#products">RECUR Club</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ecosystem</h4>
+        <a href="#partnership">Partnership (CPA)</a>
+        <a href="https://dev-geniy.github.io/recur-empire/free-master-kit" target="_blank">
+          Free Master Kit
+        </a>
+        <span class="muted">Roadmap — soon</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/legal/index.html">Legal Center</a>
+        <a href="/legal/terms">Terms of Use</a>
+        <a href="/legal/privacy">Privacy Policy</a>
+        <a href="/legal/disclaimer">Disclaimer</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM (WIDTH LIMITED) -->
+  <div class="footer-bottom-wrapper">
+    <div class="footer-bottom">
+      <span>© 2026 RECUR EMPIRE™</span>
+      <span class="muted">Engineered for Recurring Systems</span>
+
+      <div class="footer-socials">
+        <a href="#">tg</a>
+        <a href="#">in</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- ===== CPA MODAL (MOBILE ONLY) ===== -->
+<div class="cpa-modal" id="cpaModal">
+
+    <div class="cpa-modal-overlay"></div>
+
+    <div class="cpa-modal-content">
+        <button class="cpa-modal-close">&times;</button>
+
+        <div class="partner-card partner-card--modal">
+            <h3>Модель дохода</h3>
+
+            <div class="partner-stats">
+                <div>
+                    <span>CPA</span>
+                    <strong>до 40%</strong>
+                </div>
+                <div>
+                    <span>Повторные выплаты</span>
+                    <strong>Recurring</strong>
+                </div>
+                <div>
+                    <span>Формат</span>
+                    <strong>Digital</strong>
+                </div>
+            </div>
+
+            <div class="partner-note">
+                Инфраструктура построена для долгосрочного
+                партнёрского дохода.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+const orb = document.getElementById("orb");
+
+/* Проверяем мобильное устройство */
+if (window.innerWidth > 768) {
+
+    let time = 0;
+    let hue = 190;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    function animate() {
+        time += 0.002;
+
+        const floatX = Math.sin(time * 0.8) * 20 + Math.sin(time * 0.3) * 15;
+        const floatY = Math.cos(time * 0.6) * 18 + Math.sin(time * 0.5) * 12;
+
+        const scale = 1 + Math.sin(time * 1.2) * 0.015;
+
+        currentX += (mouseX - currentX) * 0.03;
+        currentY += (mouseY - currentY) * 0.03;
+
+        orb.style.transform = `
+            translate(${floatX + currentX}px, ${floatY + currentY}px)
+            scale(${scale})
+        `;
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    document.addEventListener("mousemove", (e) => {
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        mouseX = (e.clientX - centerX) * 0.02;
+        mouseY = (e.clientY - centerY) * 0.02;
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if(e.key.toLowerCase() === "r"){
+            const hue = Math.floor(Math.random() * 360);
+
+            orb.style.background = `
+                radial-gradient(circle at 30% 30%, hsla(${hue},100%,60%,0.6), transparent 40%),
+                radial-gradient(circle at 70% 70%, hsla(${(hue+40)%360},100%,60%,0.6), transparent 40%)
+            `;
+
+            orb.style.boxShadow = `
+                0 0 100px hsla(${hue},100%,60%,0.35),
+                0 0 180px hsla(${(hue+40)%360},100%,60%,0.25)
+            `;
+        }
+    });
+
+}
+  
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+        }
+    });
+}, { threshold:0.2 });
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+  
+document.querySelectorAll(".team-card").forEach(card => {
+    card.addEventListener("mousemove", e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty("--x", x + "px");
+        card.style.setProperty("--y", y + "px");
+    });
+});
+  
+document.querySelectorAll(
+".team-card, .pro-card, .pro-entry, .about-box, .partner-card"
+).forEach(card => {
+    card.addEventListener("mousemove", e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty("--x", x + "px");
+        card.style.setProperty("--y", y + "px");
+    });
+});
+
+const openBtn = document.querySelector(".js-open-cpa-modal");
+const modal = document.getElementById("cpaModal");
+const overlay = modal.querySelector(".cpa-modal-overlay");
+const closeBtn = modal.querySelector(".cpa-modal-close");
+
+openBtn?.addEventListener("click", e => {
+    e.preventDefault();
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+});
+
+[overlay, closeBtn].forEach(el => {
+    el.addEventListener("click", () => {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    });
+});
+
+</script>
+
+</body>
+</html>
