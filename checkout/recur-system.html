@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout — RECUR SYSTEM™</title>
+
+<meta name="description" content="Secure checkout for RECUR SYSTEM™ core infrastructure access.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#05070d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#05070d;
+    --primary:#00f0ff;
+    --accent:#7b3cff;
+    --text:#ffffff;
+    --muted:#8a8fa3;
+    --card:rgba(255,255,255,0.05);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* BACKGROUND */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:60px 60px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(0,240,255,0.15), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(123,60,255,0.15), transparent 60%);
+    z-index:-1;
+}
+
+/* NAV */
+nav{
+    padding:20px 60px;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.45);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* LAYOUT */
+.checkout{
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 30px;
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:60px;
+}
+
+/* LEFT */
+.checkout-left h1{
+    font-size:42px;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.checkout-left p{
+    margin-top:20px;
+    color:var(--muted);
+    font-size:16px;
+    max-width:520px;
+}
+
+/* PLAN SELECT */
+.plan{
+    margin-top:50px;
+}
+
+.plan-option{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.plan-option:hover{
+    border-color:var(--primary);
+}
+
+.plan-option.active{
+    border-color:var(--primary);
+    box-shadow:0 0 30px rgba(0,240,255,0.2);
+}
+
+.plan-option h3{
+    font-size:20px;
+}
+
+.plan-option span{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.plan-option p{
+    margin-top:10px;
+    font-size:14px;
+    color:var(--muted);
+}
+
+/* RIGHT */
+.checkout-right{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
+    padding:40px 35px;
+}
+
+.summary h3{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.line{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+    font-size:14px;
+    color:var(--muted);
+}
+
+.total{
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:20px;
+    margin-top:20px;
+    font-size:18px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.total strong{
+    color:var(--primary);
+}
+
+/* PAYMENT */
+.payment-methods{
+    margin-top:30px;
+}
+
+.method{
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:14px;
+    padding:14px 18px;
+    margin-bottom:12px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.method.active{
+    border-color:var(--primary);
+    box-shadow:0 0 20px rgba(0,240,255,0.2);
+}
+
+/* BUTTON */
+.pay-btn{
+    margin-top:35px;
+    width:100%;
+    padding:18px;
+    border-radius:40px;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    border:none;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.pay-note{
+    margin-top:20px;
+    font-size:12px;
+    color:var(--muted);
+    text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:1024px){
+    .checkout{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+    .checkout-left h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">RECUR EMPIRE™</div>
+    <a href="/recur-system.html">← Back to RECUR SYSTEM™</a>
+  </div>
+</nav>
+
+<div class="checkout">
+
+  <!-- LEFT -->
+  <div class="checkout-left">
+    <h1>Checkout</h1>
+    <p>
+      Secure access to <strong>RECUR SYSTEM™</strong> —
+      core AI-powered infrastructure for building recurring revenue systems.
+    </p>
+
+    <div class="plan">
+      <div class="plan-option active">
+        <h3>System Access</h3>
+        <span>$49 · One-time</span>
+        <p>
+          Full system access + AI tools<br>
+          <strong>1 month of RECUR CLUB included</strong>
+        </p>
+      </div>
+
+      <div class="plan-option">
+        <h3>Pro accompaniment</h3>
+        <span>$499 · One-time</span>
+        <p>
+          System + personal expert guidance<br>
+          <strong>1 year of RECUR CLUB included</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="checkout-right">
+    <div class="summary">
+      <h3>Order Summary</h3>
+
+      <div class="line">
+        <span>RECUR SYSTEM™</span>
+        <span>$49</span>
+      </div>
+
+      <div class="line">
+        <span>Access Type</span>
+        <span>System Access</span>
+      </div>
+
+      <div class="total">
+        <span>Total</span>
+        <strong>$49</strong>
+      </div>
+
+      <div class="payment-methods">
+        <div class="method active" data-method="stripe">
+          💳 Card (Stripe)
+        </div>
+        <div class="method" data-method="crypto">
+          🔗 Crypto (USDT / ETH / BTC)
+        </div>
+      </div>
+
+      <button class="pay-btn">Proceed to Payment</button>
+
+      <div class="pay-note">
+        Secure payment · No income guarantees<br>
+        Access terms & policies apply
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let selectedPlan = "basic";
+let price = 49;
+let accessLabel = "System Access";
+let paymentMethod = "stripe";
+
+const planOptions = document.querySelectorAll(".plan-option");
+const priceLine = document.querySelector(".summary .line span:last-child");
+const accessLine = document.querySelectorAll(".line")[1].querySelector("span:last-child");
+const totalAmount = document.querySelector(".total strong");
+
+const params = new URLSearchParams(window.location.search);
+const planFromUrl = params.get("plan");
+
+if (planFromUrl === "pro") {
+    selectPro();
+} else {
+    selectBasic();
+}
+
+function selectBasic(){
+    selectedPlan = "basic";
+    price = 49;
+    accessLabel = "System Access";
+    updateUI(0);
+}
+
+function selectPro(){
+    selectedPlan = "pro";
+    price = 499;
+    accessLabel = "Pro accompaniment";
+    updateUI(1);
+}
+
+function updateUI(index){
+    planOptions.forEach(o => o.classList.remove("active"));
+    planOptions[index].classList.add("active");
+
+    priceLine.innerText = "$" + price;
+    accessLine.innerText = accessLabel;
+    totalAmount.innerText = "$" + price;
+
+    const newUrl = new URL(window.location);
+    newUrl.searchParams.set("plan", selectedPlan);
+    window.history.replaceState({}, "", newUrl);
+}
+
+planOptions[0].addEventListener("click", selectBasic);
+planOptions[1].addEventListener("click", selectPro);
+
+document.querySelectorAll(".method").forEach(method => {
+    method.addEventListener("click", () => {
+        document.querySelectorAll(".method").forEach(m => m.classList.remove("active"));
+        method.classList.add("active");
+        paymentMethod = method.dataset.method;
+    });
+});
+
+document.querySelector(".pay-btn").addEventListener("click", () => {
+    alert(
+        (paymentMethod === "stripe" ? "Stripe" : "Crypto") +
+        " Payment\n\nPlan: " + selectedPlan +
+        "\nAmount: $" + price
+    );
+});
+</script>
+
+</body>
+</html>
